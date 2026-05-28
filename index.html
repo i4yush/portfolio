@@ -898,161 +898,6 @@
         }
 
         /* ============================================
-           CONNECT SECTION
-           ============================================ */
-        .connect {
-            padding: 10rem 4vw;
-            position: relative;
-        }
-
-        .connect-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .connect-header {
-            margin-bottom: 4rem;
-            text-align: center;
-        }
-
-        .connect-title {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: 300;
-            margin-bottom: 1.5rem;
-        }
-
-        .connect-subtitle {
-            font-size: 1.0625rem;
-            font-weight: 300;
-            color: var(--muted);
-            line-height: 1.8;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Social Grid */
-        .connect-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .social-card {
-            padding: 3rem 2.5rem;
-            background: linear-gradient(135deg, var(--surface), rgba(26, 26, 26, 0.5));
-            border: 1px solid var(--surface-2);
-            border-radius: 12px;
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            transition: all 0.4s var(--ease-out);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .social-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(201, 169, 110, 0.1), transparent);
-            transition: left 0.6s var(--ease-out);
-            z-index: 0;
-        }
-
-        .social-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(201, 169, 110, 0.15);
-        }
-
-        .social-card:hover::before {
-            left: 100%;
-        }
-
-        .social-card > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        .social-icon {
-            width: 56px;
-            height: 56px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(201, 169, 110, 0.1);
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .social-card:hover .social-icon {
-            background: rgba(201, 169, 110, 0.2);
-            transform: scale(1.1);
-        }
-
-        .social-icon svg {
-            width: 28px;
-            height: 28px;
-            stroke: var(--gold);
-            stroke-width: 1.5;
-            fill: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-card:hover .social-icon svg {
-            stroke-width: 2;
-        }
-
-        .social-content {
-            flex: 1;
-        }
-
-        .social-name {
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            font-weight: 300;
-            color: var(--text);
-            margin-bottom: 0.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .social-card:hover .social-name {
-            color: var(--gold);
-        }
-
-        .social-description {
-            font-size: 0.9375rem;
-            font-weight: 300;
-            color: var(--muted);
-            line-height: 1.6;
-        }
-
-        .social-link {
-            font-family: var(--font-sans);
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--gold);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-            margin-top: auto;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(201, 169, 110, 0.1);
-        }
-
-        .social-link:hover {
-            color: var(--text);
-            gap: 0.75rem;
-        }
-
-        /* ============================================
            CONTACT SECTION
            ============================================ */
         .contact {
@@ -1156,321 +1001,351 @@
             pointer-events: none;
         }
 
-        .footer-content {
-            position: relative;
-            z-index: 1;
+        .footer-container {
             max-width: 1400px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr auto auto;
-            gap: 4rem;
-            align-items: start;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-name {
+            font-size: clamp(3rem, 10vw, 8rem);
+            font-weight: 300;
+            text-align: center;
+            letter-spacing: 0.05em;
             margin-bottom: 3rem;
-        }
-
-        .footer-about {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .footer-title {
-            font-family: var(--font-serif);
-            font-size: 1.25rem;
-            font-weight: 600;
             color: var(--text);
         }
 
-        .footer-text {
-            font-size: 0.9375rem;
-            color: var(--muted);
-            max-width: 300px;
-            line-height: 1.6;
-        }
-
-        .footer-links {
+        .footer-bottom {
             display: flex;
-            flex-direction: column;
-            gap: 1rem;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--surface-2);
         }
 
-        .footer-link {
-            font-size: 0.9375rem;
+        .footer-copyright {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            color: var(--muted);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-social-link {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
             color: var(--muted);
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
-        .footer-link:hover {
+        .footer-social-link:hover {
             color: var(--gold);
         }
 
-        .footer-bottom {
-            position: relative;
-            z-index: 1;
-            padding-top: 3rem;
-            border-top: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .footer-credit {
-            font-size: 0.8125rem;
-            color: var(--muted);
-        }
-
         /* ============================================
-           RESPONSIVE DESIGN
+           RESPONSIVE STYLES
            ============================================ */
-        @media (max-width: 1024px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+        @media (max-width: 1100px) {
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .about-quote {
-                position: relative;
-                top: 0;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
+            
             .project-card {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
-
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1.5rem;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
+            
+            .project-visual {
+                min-height: 200px;
+                order: -1;
             }
         }
 
         @media (max-width: 768px) {
-            .nav-links {
+            body {
+                cursor: auto;
+            }
+            
+            .cursor {
                 display: none;
             }
-
+            
+            .nav {
+                padding: 1rem 5vw;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background-color: var(--surface);
+                flex-direction: column;
+                justify-content: center;
+                gap: 2rem;
+                transition: right 0.4s var(--ease-out);
+                padding: 2rem;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
             .nav-toggle {
                 display: flex;
+                z-index: 101;
             }
-
-            .hero {
-                padding: 0 2vw;
-                min-height: 80vh;
+            
+            .nav-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
             }
-
-            .about {
-                padding: 6rem 2vw;
+            
+            .nav-toggle.active span:nth-child(2) {
+                opacity: 0;
             }
-
-            .projects {
-                padding: 6rem 2vw;
+            
+            .nav-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
             }
-
-            .skills {
-                padding: 6rem 2vw;
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
-
-            .connect {
-                padding: 6rem 2vw;
+            
+            .terminal-card {
+                margin: 0 auto;
+                max-width: 100%;
             }
-
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .about-quote {
+                position: relative;
+                top: 0;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
             .skills-grid {
                 grid-template-columns: 1fr;
             }
-
-            .contact {
-                padding: 6rem 2vw;
-            }
-
+            
             .contact-actions {
                 flex-direction: column;
-                align-items: center;
             }
-
+            
             .contact-btn {
                 width: 100%;
                 justify-content: center;
             }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
             }
-
-            .footer {
-                padding: 4rem 2vw 2rem;
+            
+            .project-card {
+                padding: 2rem;
             }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-
-            .connect-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .social-card {
-                padding: 2.5rem 2rem;
+            
+            .project-links {
+                flex-direction: column;
+                gap: 1rem;
             }
         }
 
         @media (max-width: 480px) {
-            html {
-                font-size: 14px;
-            }
-
             .hero-title {
-                font-size: clamp(2rem, 6vw, 3.5rem);
-            }
-
-            .projects-title,
-            .skills-title {
-                font-size: clamp(1.75rem, 4vw, 2.5rem);
-            }
-
-            .about-quote {
-                font-size: clamp(1.25rem, 3vw, 2rem);
-            }
-
-            .stat-number {
                 font-size: 2.5rem;
             }
-
+            
+            .terminal-card {
+                font-size: 0.75rem;
+                padding: 1rem;
+                min-width: auto;
+            }
+            
+            .project-card {
+                padding: 1.5rem;
+            }
+            
             .project-title {
                 font-size: 1.75rem;
             }
-
-            .nav-logo {
-                font-size: 1.125rem;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
         }
+    
+        /* ============================================
+           CONNECT SECTION ENHANCEMENT
+           ============================================ */
+        .connect-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .connect-card {
+            background: linear-gradient(135deg, var(--surface), var(--surface-2));
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 16px;
+            text-decoration: none;
+            transition: all 0.35s var(--ease-out);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .connect-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+        }
+
+        .connect-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+
+        .connect-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .connect-arrow {
+            margin-top: 1.5rem;
+            color: var(--gold);
+            font-size: 0.9rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
     </style>
 </head>
 <body>
     <!-- Custom Cursor -->
-    <div class="cursor"></div>
+    <div class="cursor" id="cursor"></div>
 
     <!-- Navigation -->
-    <nav class="nav">
-        <a href="#home" class="nav-logo">AM</a>
-        <div class="nav-links">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#connect" class="nav-link">Connect</a>
-        </div>
-        <a href="mailto:hello@ayushmalviya.dev" class="nav-cta">Get in Touch</a>
-        <button class="nav-toggle">
+    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+        <a href="#" class="nav-logo" data-cursor-hover>AM</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
+        <div class="nav-links" id="navLinks">
+            <a href="#about" class="nav-link" data-cursor-hover>About</a>
+            <a href="#work" class="nav-link" data-cursor-hover>Work</a>
+            <a href="#skills" class="nav-link" data-cursor-hover>Skills</a>
+            <a href="#contact" class="nav-link" data-cursor-hover>Contact</a>
+            <a href="#connect" class="nav-link" data-cursor-hover>Connect</a>
+            <a href="#contact" class="nav-cta" data-cursor-hover>Hire Me</a>
+        </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-blobs">
+    <section class="hero" id="hero" aria-label="Hero">
+        <div class="hero-blobs" aria-hidden="true">
             <div class="blob blob-1"></div>
             <div class="blob blob-2"></div>
             <div class="blob blob-3"></div>
         </div>
+        
         <div class="hero-content">
             <div class="hero-text">
-                <span class="hero-section-num"><span class="section-number">01.</span> Welcome</span>
+                <span class="hero-section-num">00</span>
                 <h1 class="hero-title">
-                    <span class="hero-title-line1">Building the</span>
-                    <span class="hero-title-line2">Future, Today.</span>
+                    <span class="hero-title-line1">Ayush Malviya</span>
+                    <span class="hero-title-line2">Full-Stack Engineer</span>
                 </h1>
-                <p class="hero-subtitle">Full-Stack Developer & Creative Technologist</p>
+                <p class="hero-subtitle">CS Graduate · 2025 · Building scalable software</p>
             </div>
-            <div class="terminal-card">
+            
+            <div class="terminal-card" data-cursor-hover>
                 <div class="terminal-header">
-                    <div class="terminal-dot red"></div>
-                    <div class="terminal-dot yellow"></div>
-                    <div class="terminal-dot green"></div>
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
                 </div>
                 <div class="terminal-line">
                     <span class="terminal-prompt">$</span>
-                    <span class="terminal-command"> whoami</span>
+                    <span class="terminal-command">whoami</span>
                 </div>
-                <div class="terminal-line">
-                    <span class="terminal-output">Ayush Malviya</span>
-                </div>
+                <div class="terminal-output">→ ayush malviya</div>
                 <div class="terminal-line">
                     <span class="terminal-prompt">$</span>
-                    <span class="terminal-command"> cat skills.txt</span>
+                    <span class="terminal-command">skills</span>
                 </div>
-                <div class="terminal-line">
-                    <span class="terminal-output">Full-Stack • AI/ML • DevOps</span>
-                </div>
+                <div class="terminal-output">→ full-stack, devops, linux</div>
                 <div class="terminal-line">
                     <span class="terminal-prompt">$</span>
-                    <span class="terminal-cursor"></span>
+                    <span class="terminal-command">status</span>
                 </div>
+                <div class="terminal-output">→ open to work ✓<span class="terminal-cursor"></span></div>
             </div>
         </div>
-        <div class="scroll-prompt">
+        
+        <div class="scroll-prompt" aria-hidden="true">
             <span class="scroll-prompt-text">Scroll to explore</span>
-            <div class="scroll-prompt-arrow"></div>
+            <span class="scroll-prompt-arrow"></span>
         </div>
     </section>
 
-    <!-- Divider -->
     <div class="section-divider"></div>
 
     <!-- About Section -->
-    <section class="about" id="about">
+    <section class="about" id="about" aria-label="About">
         <div class="about-container">
+            <p class="section-label reveal"><span class="section-number">01</span> / About Me</p>
+            
             <div class="about-grid">
-                <div class="about-quote">
-                    Code is poetry, and I'm here to write the next verse.
+                <div class="about-quote reveal reveal-delay-1">
+                    I don't just write code — I architect experiences.
                 </div>
+                
                 <div class="about-content">
-                    <p class="about-text reveal">
-                        Hi! I'm a <strong>CS graduate (2025)</strong> passionate about building scalable software solutions. With expertise in <strong>full-stack development, AI/ML integration, and DevOps</strong>, I transform complex problems into elegant digital experiences.
-                    </p>
-                    <p class="about-text reveal reveal-delay-1">
-                        From architecting <strong>fintech systems</strong> to deploying <strong>AI-powered products</strong>, I love the entire spectrum of software engineering. I'm driven by innovation, clean code, and creating products that matter.
-                    </p>
                     <p class="about-text reveal reveal-delay-2">
-                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or brainstorming the next big idea.
+                        I'm a <strong>Computer Science graduate</strong> with a deep passion for building real-world full-stack applications. My journey in software engineering has been driven by an obsession with clean code, system design, and creating products that make a meaningful impact.
                     </p>
-                    <div class="stats-grid">
-                        <div class="stat-item reveal reveal-delay-3">
-                            <div class="stat-number">10+</div>
-                            <div class="stat-label">Projects Completed</div>
+                    
+                    <p class="about-text reveal reveal-delay-3">
+                        I've shipped <strong>production-grade fintech systems</strong> handling sensitive financial data, built <strong>AI-powered mental health tools</strong> that provide empathetic support to users, and crafted <strong>automated DevOps pipelines</strong> that streamline deployment workflows.
+                    </p>
+                    
+                    <p class="about-text reveal reveal-delay-4">
+                        With a strong foundation in <strong>Linux, cloud infrastructure, and backend architecture</strong>, I approach every project with a systems-thinking mindset. I believe great software is born at the intersection of technical excellence and user-centric design.
+                    </p>
+                    
+                    <div class="stats-grid reveal reveal-delay-5">
+                        <div class="stat-item">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Projects Shipped</div>
                         </div>
-                        <div class="stat-item reveal reveal-delay-4">
+                        <div class="stat-item">
                             <div class="stat-number">5+</div>
-                            <div class="stat-label">Years of Experience</div>
+                            <div class="stat-label">Technologies Mastered</div>
                         </div>
-                        <div class="stat-item reveal reveal-delay-5">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Passion Driven</div>
+                        <div class="stat-item">
+                            <div class="stat-number">1</div>
+                            <div class="stat-label">Year of Building in Production</div>
                         </div>
                     </div>
                 </div>
@@ -1478,400 +1353,455 @@
         </div>
     </section>
 
-    <!-- Divider -->
     <div class="section-divider"></div>
 
     <!-- Projects Section -->
-    <section class="projects" id="projects">
+    <section class="projects" id="work" aria-label="Projects">
         <div class="projects-container">
             <div class="projects-header">
-                <span class="section-label"><span class="section-number">02.</span> Featured Work</span>
-                <h2 class="projects-title reveal">Notable Projects</h2>
+                <p class="section-label reveal"><span class="section-number">02</span> / Selected Work</p>
+                <h2 class="projects-title reveal reveal-delay-1">Things I've Built</h2>
             </div>
-
-            <!-- Project Card 1 -->
-            <div class="project-card reveal">
+            
+            <!-- Project 1: Intrust -->
+            <article class="project-card reveal reveal-delay-2" data-cursor-hover>
                 <div class="project-info">
-                    <span class="project-tag">Fintech Platform</span>
-                    <h3 class="project-title">Advanced Payment Gateway</h3>
+                    <span class="project-tag">Fintech · Full-Stack</span>
+                    <h3 class="project-title">Intrust</h3>
                     <p class="project-description">
-                        Built a secure, scalable payment processing platform handling millions of transactions with real-time settlement and fraud detection.
+                        A secure, scalable personal finance management system with real-time transaction tracking, budgeting analytics, and bank-grade security architecture. Built with a focus on data integrity and financial compliance patterns.
                     </p>
                     <div class="project-stack">
-                        <span class="stack-item">Node.js</span>
+                        <span class="stack-item">Next.js</span>
                         <span class="stack-item">React</span>
-                        <span class="stack-item">PostgreSQL</span>
-                        <span class="stack-item">Stripe API</span>
+                        <span class="stack-item">JWT</span>
+                        <span class="stack-item">Supabase</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <a href="https://intrustindia.com" class="project-link" target="_blank" rel="noopener noreferrer" data-cursor-hover>
+                            Live Demo
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M7 17L17 7M17 7H7M17 7V17"/>
                             </svg>
-                            View Project
-                        </a>
-                        <a href="#" class="project-link">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-                            </svg>
-                            GitHub
                         </a>
                     </div>
                 </div>
                 <div class="project-visual visual-fintech">
                     <div class="project-visual-content">
                         <div class="visual-icon">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                <polyline points="9 22 9 12 15 12 15 22"/>
+                            <svg viewBox="0 0 100 100">
+                                <rect x="15" y="15" width="70" height="70" rx="8"/>
+                                <line x1="35" y1="35" x2="65" y2="65"/>
+                                <line x1="65" y1="35" x2="35" y2="65"/>
                             </svg>
                         </div>
-                        <p style="color: var(--muted); font-size: 0.9rem;">Payment Processing</p>
                     </div>
                 </div>
-            </div>
-
-            <!-- Project Card 2 -->
-            <div class="project-card reveal reveal-delay-2">
+            </article>
+            
+            <!-- Project 2: MindBridge -->
+            <article class="project-card reveal reveal-delay-3" data-cursor-hover>
                 <div class="project-info">
-                    <span class="project-tag">AI/ML Application</span>
-                    <h3 class="project-title">Intelligent Content Platform</h3>
+                    <span class="project-tag">AI · Healthcare</span>
+                    <h3 class="project-title">MindBridge</h3>
                     <p class="project-description">
-                        Developed an AI-powered platform that analyzes and generates intelligent content recommendations using advanced ML models.
+                        An empathetic AI-powered chatbot providing 24/7 mental health support using NLP-driven conversation flows. Designed with trauma-informed UX principles and crisis escalation pathways.
                     </p>
                     <div class="project-stack">
                         <span class="stack-item">Python</span>
-                        <span class="stack-item">TensorFlow</span>
-                        <span class="stack-item">FastAPI</span>
-                        <span class="stack-item">Vue.js</span>
+                        <span class="stack-item">Django</span>
+                        <span class="stack-item">NLP</span>
+                        <span class="stack-item">React</span>
+                        <span class="stack-item">PostgreSQL</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <a href="https://github.com/i4yush/VibeCheck" class="project-link" target="_blank" rel="noopener noreferrer" data-cursor-hover>
+                            GitHub
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M7 17L17 7M17 7H7M17 7V17"/>
                             </svg>
-                            View Project
                         </a>
-                        <a href="#" class="project-link">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                        <a href="#" class="project-link" data-cursor-hover>
+                            Case Study
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
                             </svg>
-                            GitHub
                         </a>
                     </div>
                 </div>
                 <div class="project-visual visual-ai">
                     <div class="project-visual-content">
                         <div class="visual-icon">
-                            <svg viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="1"/>
-                                <path d="M12 3v6M12 15v6M3 12h6M15 12h6"/>
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="30"/>
+                                <circle cx="50" cy="50" r="15"/>
+                                <line x1="50" y1="5" x2="50" y2="20"/>
+                                <line x1="50" y1="80" x2="50" y2="95"/>
+                                <line x1="5" y1="50" x2="20" y2="50"/>
+                                <line x1="80" y1="50" x2="95" y2="50"/>
                             </svg>
                         </div>
-                        <p style="color: var(--muted); font-size: 0.9rem;">AI-Powered</p>
                     </div>
                 </div>
-            </div>
-
-            <!-- Project Card 3 -->
-            <div class="project-card reveal reveal-delay-4">
+            </article>
+            
+            <!-- Project 3: PipeForge -->
+            <article class="project-card reveal reveal-delay-4" data-cursor-hover>
                 <div class="project-info">
-                    <span class="project-tag">DevOps & Infrastructure</span>
-                    <h3 class="project-title">Cloud Infrastructure Automation</h3>
+                    <span class="project-tag">DevOps · Infrastructure</span>
+                    <h3 class="project-title">PipeForge</h3>
                     <p class="project-description">
-                        Engineered automated deployment pipelines and containerized infrastructure, reducing deployment time by 80%.
+                        An automated CI/CD pipeline toolkit for Linux-based VPS deployments. Handles zero-downtime deploys, environment secret management, rollback, and health checks via a single CLI interface.
                     </p>
                     <div class="project-stack">
+                        <span class="stack-item">Bash</span>
                         <span class="stack-item">Docker</span>
-                        <span class="stack-item">Kubernetes</span>
-                        <span class="stack-item">AWS</span>
-                        <span class="stack-item">CI/CD</span>
+                        <span class="stack-item">Linux</span>
+                        <span class="stack-item">Nginx</span>
+                        <span class="stack-item">GitHub Actions</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <a href="https://github.com/i4yush" class="project-link" target="_blank" rel="noopener noreferrer" data-cursor-hover>
+                            GitHub
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M7 17L17 7M17 7H7M17 7V17"/>
                             </svg>
-                            View Project
-                        </a>
-                        <a href="#" class="project-link">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-                            </svg>
-                            GitHub
                         </a>
                     </div>
                 </div>
                 <div class="project-visual visual-devops">
                     <div class="project-visual-content">
                         <div class="visual-icon">
-                            <svg viewBox="0 0 24 24">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                <path d="M12 8v8M8 12h8"/>
+                            <svg viewBox="0 0 100 100">
+                                <rect x="20" y="20" width="25" height="25" rx="4"/>
+                                <rect x="55" y="20" width="25" height="25" rx="4"/>
+                                <rect x="20" y="55" width="25" height="25" rx="4"/>
+                                <rect x="55" y="55" width="25" height="25" rx="4"/>
+                                <line x1="45" y1="32" x2="55" y2="32"/>
+                                <line x1="45" y1="67" x2="55" y2="67"/>
+                                <line x1="32" y1="45" x2="32" y2="55"/>
+                                <line x1="67" y1="45" x2="67" y2="55"/>
                             </svg>
                         </div>
-                        <p style="color: var(--muted); font-size: 0.9rem;">Infrastructure</p>
                     </div>
                 </div>
-            </div>
+            </article>
         </div>
     </section>
 
-    <!-- Divider -->
     <div class="section-divider"></div>
 
     <!-- Skills Section -->
-    <section class="skills" id="skills">
+    <section class="skills" id="skills" aria-label="Skills">
         <div class="skills-container">
             <div class="skills-header">
-                <span class="section-label"><span class="section-number">03.</span> Expertise</span>
-                <h2 class="skills-title reveal">Technical Skills</h2>
+                <p class="section-label reveal"><span class="section-number">03</span> / Skills & Tools</p>
+                <h2 class="skills-title reveal reveal-delay-1">Technologies I Work With</h2>
             </div>
-
-            <div class="skills-grid">
-                <div class="skill-column reveal">
+            
+            <div class="skills-grid reveal reveal-delay-2">
+                <div class="skill-column">
+                    <h3 class="skill-column-title">Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-cursor-hover>TypeScript</span>
+                        <span class="skill-tag" data-cursor-hover>JavaScript</span>
+                        <span class="skill-tag" data-cursor-hover>Python</span>
+                        <span class="skill-tag" data-cursor-hover>SQL</span>
+                        <span class="skill-tag" data-cursor-hover>Bash</span>
+                    </div>
+                </div>
+                
+                <div class="skill-column">
                     <h3 class="skill-column-title">Frontend</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Vue.js</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">Tailwind</span>
-                        <span class="skill-tag">Next.js</span>
-                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag" data-cursor-hover>React</span>
+                        <span class="skill-tag" data-cursor-hover>Next.js</span>
+                        <span class="skill-tag" data-cursor-hover>Tailwind CSS</span>
+                        <span class="skill-tag" data-cursor-hover>HTML/CSS</span>
                     </div>
                 </div>
-
-                <div class="skill-column reveal reveal-delay-1">
-                    <h3 class="skill-column-title">Backend</h3>
+                
+                <div class="skill-column">
+                    <h3 class="skill-column-title">Backend & Database</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Express</span>
-                        <span class="skill-tag">FastAPI</span>
-                        <span class="skill-tag">GraphQL</span>
-                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag" data-cursor-hover>Node.js</span>
+                        <span class="skill-tag" data-cursor-hover>Django</span>
+                        <span class="skill-tag" data-cursor-hover>Express</span>
+                        <span class="skill-tag" data-cursor-hover>MongoDB</span>
+                        <span class="skill-tag" data-cursor-hover>PostgreSQL</span>
+                        <span class="skill-tag" data-cursor-hover>Docker</span>
                     </div>
                 </div>
-
-                <div class="skill-column reveal reveal-delay-2">
-                    <h3 class="skill-column-title">Data & AI</h3>
+                
+                <div class="skill-column">
+                    <h3 class="skill-column-title">Infrastructure</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Machine Learning</span>
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">Data Science</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                    </div>
-                </div>
-
-                <div class="skill-column reveal reveal-delay-3">
-                    <h3 class="skill-column-title">DevOps</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Kubernetes</span>
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">CI/CD</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag" data-cursor-hover>Linux</span>
+                        <span class="skill-tag" data-cursor-hover>VPS Management</span>
+                        <span class="skill-tag" data-cursor-hover>Nginx</span>
+                        <span class="skill-tag" data-cursor-hover>GitHub Actions</span>
+                        <span class="skill-tag" data-cursor-hover>SSH</span>
+                        <span class="skill-tag" data-cursor-hover>Systemd</span>
                     </div>
                 </div>
             </div>
-
-            <div class="linux-highlight">
-                <div class="linux-highlight-title">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+            
+            <div class="linux-highlight reveal reveal-delay-3">
+                <h3 class="linux-highlight-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 0.5rem;">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
                     </svg>
-                    Linux & Open Source
-                </div>
+                    Linux & VPS Experience
+                </h3>
                 <p class="linux-highlight-text">
-                    Strong advocate for open-source software and Linux ecosystem. Experience with Ubuntu, CentOS, and various Linux distributions for development and deployment environments.
+                    Comfortable managing Ubuntu/Debian production servers — setting up Nginx, SSL (Let's Encrypt), systemd services, firewall rules, and monitoring. I treat the terminal as home.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Divider -->
-    <div class="section-divider"></div>
-
-    <!-- Connect Section -->
-    <section class="connect" id="connect">
-        <div class="connect-container">
-            <div class="connect-header">
-                <span class="section-label"><span class="section-number">04.</span> Let's Connect</span>
-                <h2 class="connect-title reveal">Connect With Me</h2>
-                <p class="connect-subtitle reveal reveal-delay-1">
-                    Open to collaborations, freelance projects, and building cool products. Let's create something amazing together.
-                </p>
-            </div>
-
-            <div class="connect-grid">
-                <!-- LinkedIn Card -->
-                <a href="https://in.linkedin.com/in/ayush-malviya-908119228" target="_blank" rel="noopener noreferrer" class="social-card reveal reveal-delay-2">
-                    <div class="social-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
-                            <circle cx="4" cy="4" r="2"/>
-                        </svg>
-                    </div>
-                    <div class="social-content">
-                        <div class="social-name">LinkedIn</div>
-                        <p class="social-description">Connect with me on LinkedIn to see my professional journey and endorsements.</p>
-                    </div>
-                    <div class="social-link">
-                        Connect →
-                    </div>
-                </a>
-
-                <!-- GitHub Card -->
-                <a href="https://github.com/i4yush" target="_blank" rel="noopener noreferrer" class="social-card reveal reveal-delay-3">
-                    <div class="social-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.32.1-2.75 0 0 .84-.27 2.75 1.02.8-.22 1.65-.34 2.5-.34s1.7.12 2.5.35c1.91-1.29 2.75-1.02 2.75-1.02.55 1.43.2 2.49.1 2.75.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.93.36.31.68.93.68 1.88v2.79c0 .27.18.58.69.48C19.14 20.16 22 16.42 22 12c0-5.52-4.48-10-10-10z"/>
-                        </svg>
-                    </div>
-                    <div class="social-content">
-                        <div class="social-name">GitHub</div>
-                        <p class="social-description">Check out my repositories and see the projects I'm working on.</p>
-                    </div>
-                    <div class="social-link">
-                        Explore →
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Divider -->
     <div class="section-divider"></div>
 
     <!-- Contact Section -->
-    <section class="contact">
+    <section class="contact" id="contact" aria-label="Contact">
         <div class="contact-container">
-            <span class="section-label"><span class="section-number">05.</span> Get In Touch</span>
-            <h2 class="contact-title reveal">Let's Work Together</h2>
-            <p class="contact-subtitle reveal reveal-delay-1">
-                Have a project in mind? Let's create something extraordinary.
+            <p class="section-label reveal"><span class="section-number">04</span> / Contact</p>
+            <h2 class="contact-title reveal reveal-delay-1">Let's Build Something.</h2>
+            <p class="contact-subtitle reveal reveal-delay-2">
+                Open to full-time roles, freelance projects, and interesting collaborations.
             </p>
-            <div class="contact-actions">
-                <a href="mailto:hello@ayushmalviya.dev" class="contact-btn contact-btn-primary reveal reveal-delay-2">
-                    Send me an Email
+            
+            <div class="contact-actions reveal reveal-delay-3">
+                <a href="mailto:i4yush@gmail.com" class="contact-btn contact-btn-primary" data-cursor-hover>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    Send an Email
                 </a>
-                <a href="https://calendly.com/ayushmalviya" target="_blank" rel="noopener noreferrer" class="contact-btn contact-btn-secondary reveal reveal-delay-3">
-                    Schedule a Call
+                <a href="https://www.linkedin.com/in/ayush-malviya-908119228/" class="contact-btn contact-btn-secondary" target="_blank" rel="noopener noreferrer" data-cursor-hover>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                        <rect x="2" y="9" width="4" height="12"/>
+                        <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                    View LinkedIn
                 </a>
             </div>
-            <a href="https://github.com/i4yush" target="_blank" rel="noopener noreferrer" class="contact-github reveal reveal-delay-4">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.32.1-2.75 0 0 .84-.27 2.75 1.02.8-.22 1.65-.34 2.5-.34s1.7.12 2.5.35c1.91-1.29 2.75-1.02 2.75-1.02.55 1.43.2 2.49.1 2.75.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.93.36.31.68.93.68 1.88v2.79c0 .27.18.58.69.48C19.14 20.16 22 16.42 22 12c0-5.52-4.48-10-10-10z"/>
+            
+            <a href="https://github.com/i4yush" class="contact-github reveal reveal-delay-4" target="_blank" rel="noopener noreferrer" data-cursor-hover>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
                 </svg>
-                i4yush
+                github.com/i4yush
             </a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-about">
-                <div class="footer-title">Ayush Malviya</div>
-                <p class="footer-text">Full-Stack Developer & Software Engineer crafting digital experiences.</p>
-            </div>
-            <div class="footer-links">
-                <a href="#about" class="footer-link">About</a>
-                <a href="#projects" class="footer-link">Projects</a>
-                <a href="#skills" class="footer-link">Skills</a>
-                <a href="#connect" class="footer-link">Connect</a>
-            </div>
-            <div class="footer-links">
-                <a href="https://github.com/i4yush" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
-                <a href="https://in.linkedin.com/in/ayush-malviya-908119228" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
-                <a href="mailto:hello@ayushmalviya.dev" class="footer-link">Email</a>
+    
+    <div class="section-divider"></div>
+
+    <!-- Connect Section -->
+    <section class="contact" id="connect" aria-label="Connect">
+        <div class="contact-container">
+            <p class="section-label reveal"><span class="section-number">05</span> / Connect With Me</p>
+            <h2 class="contact-title reveal reveal-delay-1">Let’s Connect Online.</h2>
+            <p class="contact-subtitle reveal reveal-delay-2">
+                Open to collaborations, freelance projects, startups, and building cool products.
+            </p>
+
+            <div class="connect-grid reveal reveal-delay-3">
+                <a href="https://www.linkedin.com/in/ayush-malviya-908119228/" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="connect-card"
+                   data-cursor-hover>
+                    <h3>LinkedIn</h3>
+                    <p>
+                        Professional profile, experience, network, and founder journey.
+                    </p>
+                    <div class="connect-arrow">View Profile →</div>
+                </a>
+
+                <a href="https://github.com/i4yush" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="connect-card"
+                   data-cursor-hover>
+                    <h3>GitHub</h3>
+                    <p>
+                        Explore projects, experiments, full-stack builds, and open-source work.
+                    </p>
+                    <div class="connect-arrow">Explore Code →</div>
+                </a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p class="footer-credit">© 2024 Ayush Malviya. All rights reserved.</p>
-            <p class="footer-credit">Crafted with code and coffee ☕</p>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-container">
+            <p class="footer-name">AYUSH MALVIYA</p>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">Copyright 2026 · Built by Ayush Malviya</p>
+                
+                <div class="footer-social">
+                    <a href="https://github.com/i4yush" class="footer-social-link" target="_blank" rel="noopener noreferrer" data-cursor-hover aria-label="GitHub">GitHub</a>
+                    <a href="https://www.linkedin.com/in/ayush-malviya-908119228/" class="footer-social-link" target="_blank" rel="noopener noreferrer" data-cursor-hover aria-label="LinkedIn">LinkedIn</a>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        // Custom Cursor
-        const cursor = document.querySelector('.cursor');
-        let mouseX = 0, mouseY = 0;
+        // ============================================
+        // CUSTOM CURSOR
+        // ============================================
+        const cursor = document.getElementById('cursor');
+        const cursorHoverElements = document.querySelectorAll('[data-cursor-hover]');
+        
+        // Only enable custom cursor on non-touch devices
+        if (window.matchMedia('(pointer: fine)').matches) {
+            let mouseX = 0, mouseY = 0;
+            let cursorX = 0, cursorY = 0;
+            
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+            
+            // Smooth cursor follow
+            function animateCursor() {
+                const dx = mouseX - cursorX;
+                const dy = mouseY - cursorY;
+                
+                cursorX += dx * 0.15;
+                cursorY += dy * 0.15;
+                
+                cursor.style.left = cursorX + 'px';
+                cursor.style.top = cursorY + 'px';
+                
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+            
+            // Hover effect
+            cursorHoverElements.forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+            });
+        }
 
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            cursor.style.left = mouseX + 'px';
-            cursor.style.top = mouseY + 'px';
-        });
-
-        // Cursor hover effect
-        const hoverElements = document.querySelectorAll('a, button');
-        hoverElements.forEach(el => {
-            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-        });
-
-        // Smooth scroll and nav highlight
-        const navLinks = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('section');
-
+        // ============================================
+        // NAVIGATION SCROLL EFFECT
+        // ============================================
+        const nav = document.getElementById('nav');
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        
         window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 60) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-
-            // Nav scrolled effect
-            const nav = document.querySelector('.nav');
-            if (window.scrollY > 50) {
+            if (window.scrollY > 100) {
                 nav.classList.add('scrolled');
             } else {
                 nav.classList.remove('scrolled');
             }
         });
+        
+        // Mobile nav toggle
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            navToggle.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+        });
+        
+        // Close mobile nav on link click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
 
-        // Reveal animations
-        const reveals = document.querySelectorAll('.reveal');
-
-        const observer = new IntersectionObserver((entries) => {
+        // ============================================
+        // SCROLL REVEAL ANIMATIONS (IntersectionObserver)
+        // ============================================
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1 });
-
-        reveals.forEach(reveal => observer.observe(reveal));
-
-        // Mobile menu toggle
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinksContainer = document.querySelector('.nav-links');
-
-        navToggle.addEventListener('click', () => {
-            navLinksContainer.style.display = 
-                navLinksContainer.style.display === 'flex' ? 'none' : 'flex';
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         });
+        
+        revealElements.forEach(el => revealObserver.observe(el));
 
-        // Close mobile menu on link click
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinksContainer.style.display = 'none';
+        // ============================================
+        // ACTIVE NAV LINK HIGHLIGHTING
+        // ============================================
+        const sections = document.querySelectorAll('section[id]');
+        const navLinkElements = document.querySelectorAll('.nav-link');
+        
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinkElements.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, {
+            threshold: 0.3
+        });
+        
+        sections.forEach(section => sectionObserver.observe(section));
+
+        // ============================================
+        // SMOOTH SCROLL FOR ANCHOR LINKS
+        // ============================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
+
+        // ============================================
+        // REDUCED MOTION PREFERENCE
+        // ============================================
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            // Disable animations for users who prefer reduced motion
+            document.querySelectorAll('.blob').forEach(blob => {
+                blob.style.animation = 'none';
+            });
+            
+            document.querySelectorAll('.reveal').forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+                el.style.transition = 'none';
+            });
+        }
     </script>
 </body>
 </html>
